@@ -34,24 +34,24 @@ import config
 
 
 
-ask_ques = "**» ▷ ᴄʜᴏᴏꜱᴇ ᴛʜᴇ ꜱᴛʀɪɴɢ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ✔️ : :**"
+ask_ques = "**» ▷ 𝐂𝐡𝐨𝐨𝐬𝐞 𝐓𝐡𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐖𝐡𝐢𝐜𝐡 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 ✔️ : :**"
 buttons_ques = [
     [
-        InlineKeyboardButton("🌹ᴘʏ🌹", callback_data="pyrogram1"),
-        InlineKeyboardButton("🍁ᴘʏ ᴠ2🍁", callback_data="pyrogram"),
+        InlineKeyboardButton("🌹𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌🌹", callback_data="pyrogram1"),
+        InlineKeyboardButton("🥀𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐕2🥀", callback_data="pyrogram"),
     ],
     [
-        InlineKeyboardButton("🍷ᴛʟ🍷", callback_data="telethon"),
+        InlineKeyboardButton("🍷𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍🍷", callback_data="telethon"),
     ],
     [
-        InlineKeyboardButton("🌸ᴘʏ ʙᴏᴛ🌸", callback_data="pyrogram_bot"),
-        InlineKeyboardButton("🌷ᴛʟ ʙᴏᴛ🌷", callback_data="telethon_bot"),
+        InlineKeyboardButton("🌸𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐁𝐎𝐓🌸", callback_data="pyrogram_bot"),
+        InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
 ]
 
 gen_button = [
     [
-        InlineKeyboardButton(text=" ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ ", callback_data="generate")
+        InlineKeyboardButton(text=" 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐄 𝐒𝐓𝐑𝐈𝐍𝐆 ", callback_data="generate")
     ]
 ]
 
@@ -65,17 +65,17 @@ async def main(_, msg):
 
 async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: bool = False, is_bot: bool = False):
     if telethon:
-        ty = "ᴛᴇʟᴇᴛʜᴏɴ"
+        ty = "𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍"
     else:
-        ty = "ᴘʏʀᴏɢʀᴀᴍ"
+        ty = "𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌"
         if not old_pyro:
-            ty += " ᴠ2"
+            ty += " 𝐕2"
     if is_bot:
-        ty += " ʙᴏᴛ"
-    await msg.reply(f"» ᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ  **{ty}**   sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
+        ty += " 𝐁𝐎𝐓"
+    await msg.reply(f"» 𝐓𝐑𝐘𝐈𝐍𝐆 𝐓𝐎 𝐒𝐓𝐀𝐑𝐓 **{ty}** 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐎𝐑...")
     user_id = msg.chat.id
-    api_id_msg = await bot.ask(user_id, ""𝐏𝐋𝐄𝐀𝐒𝐄 𝐒𝐄𝐍𝐃 𝐘𝐎𝐔 **𝐀𝐏𝐈_𝐈𝐃** 𝐓𝐎 𝐏𝐑𝐎𝐂𝐄𝐄𝐃.\n\n𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 /skip 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐁𝐎𝐓 𝐀𝐏𝐈.", filters=filters.text)
-       if await cancelled(api_id_msg):
+    api_id_msg = await bot.ask(user_id, "𝐏𝐋𝐄𝐀𝐒𝐄 𝐒𝐄𝐍𝐃 𝐘𝐎𝐔 **𝐀𝐏𝐈_𝐈𝐃** 𝐓𝐎 𝐏𝐑𝐎𝐂𝐄𝐄𝐃.\n\n𝐂𝐋𝐈𝐂𝐊 𝐎𝐍 /skip 𝐅𝐎𝐑 𝐔𝐒𝐈𝐍𝐆 𝐁𝐎𝐓 𝐀𝐏𝐈.", filters=filters.text)
+    if await cancelled(api_id_msg):
         return
     if api_id_msg.text == "/skip":
         api_id = config.API_ID
@@ -200,4 +200,4 @@ async def cancelled(msg):
         return True
     else:
         return False
-    
+            
