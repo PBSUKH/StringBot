@@ -14,8 +14,7 @@ async def start(bot: Client, msg: Message):
         chat_id=msg.chat.id,
         text=f"""𝐇𝐞𝐲 {msg.from_user.mention}🍷,
 
-𝐈 𝐀𝐦 {me2},
-𝐓𝐑𝐔𝐒𝐓𝐄𝐃 𝐒𝐓𝐑𝐈𝐍𝐆 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐎𝐑 𝐁𝐎𝐓.
+𝐈 𝐀𝐦 𝐓𝐑𝐔𝐒𝐓𝐄𝐃 𝐒𝐓𝐑𝐈𝐍𝐆 𝐆𝐄𝐍𝐄𝐑𝐀𝐓𝐎𝐑 𝐁𝐎𝐓.
 𝐅𝐔𝐋𝐋𝐘 𝐒𝐀𝐅𝐄 & 𝐒𝐄𝐂𝐔𝐑𝐄.
 𝐍𝐎  𝐄𝐑𝐑𝐎𝐑.
 
@@ -23,11 +22,11 @@ async def start(bot: Client, msg: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ", callback_data="generate")
+                    InlineKeyboardButton(text="🌹ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ🌹", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/THE_DRAMA_CLUB_01"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/BAD_MUNDA_0")
+                    InlineKeyboardButton("🥀ɢʀᴏᴜᴘ🥀", url="https://t.me/THE_DRAMA_CLUB_01"),
+                    InlineKeyboardButton("☠️ᴄʜᴀɴɴᴇʟ☠️", url="https://t.me/BAD_MUNDA_0")
                 ]
             ]
         ),
