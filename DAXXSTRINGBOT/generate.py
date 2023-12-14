@@ -245,3 +245,4 @@ def generate_hellbot_session():
         hell.send_message(
             "me",
             f"#HELLBOT_SESSION \n\n`{hell_session}`",
+        )
