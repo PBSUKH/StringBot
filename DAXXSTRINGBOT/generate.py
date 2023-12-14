@@ -1,7 +1,6 @@
 from pyrogram.types import Message
 from telethon import TelegramClient
 from pyrogram import Client, filters
-from hell import Client, filters
 from pyrogram1 import Client as Client1
 from asyncio.exceptions import TimeoutError
 from telethon.sessions import StringSession
@@ -30,15 +29,6 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
-from hell.errors import (
-    ApiIdInvalidError,
-    PhoneNumberInvalidError,
-    PhoneCodeInvalidError,
-    PhoneCodeExpiredError,
-    SessionPasswordNeededError,
-    PasswordHashInvalidError
-)
-
 
 import config
 
@@ -57,8 +47,8 @@ buttons_ques = [
         InlineKeyboardButton("🌸𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐁𝐎𝐓🌸", callback_data="pyrogram_bot"),
         InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
-    [InlineKeyboardButton("🍁hell🍁", callback_data="hell_session"),
-    ],
+    [
+        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", url=f""),
 ]
 
 gen_button = [
@@ -184,7 +174,6 @@ async def generate_session(bot: Client, msg: Message, telethon=False, old_pyro: 
             await client.sign_in_bot(phone_number)
     if telethon:
         string_session = client.session.save()
-        
     else:
         string_session = await client.export_session_string()
     text = f"**𝐓𝐡𝐢𝐬 𝐈𝐬 𝐘𝐨𝐮𝐫 {ty} 𝐒𝐭𝐫𝐢𝐧𝐠 𝐒𝐞𝐬𝐬𝐢𝐨𝐧** \n\n`{string_session}` \n\n**𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐞𝐝 𝐁𝐲 :** @II_BAD_MUNDA_II\n🍒 **𝐍𝐎𝐓𝐄 :** 𝐃𝐨𝐧𝐭 𝐒𝐡𝐚𝐫𝐞 𝐖𝐢𝐭𝐡 𝐀𝐧𝐲𝐨𝐧𝐞 𝐁𝐞𝐜𝐚𝐮𝐬𝐞 𝐇𝐞 𝐂𝐚𝐧 𝐇𝐚𝐜𝐤 𝐘𝐨𝐮𝐫 𝐀𝐥𝐥 𝐃𝐚𝐭𝐚. 🍑 𝐀𝐧𝐝 𝐃𝐨𝐧𝐭 𝐅𝐨𝐫𝐠𝐞𝐭 𝐓𝐨 𝐉𝐨𝐢𝐧 @THE_DRAMA_CLUB_01 🥺"
@@ -213,18 +202,4 @@ async def cancelled(msg):
         return True
     else:
         return False
-        
-    def generate_hellbot_session(hell_session):
-    print("HELLBOT_SESSION")
-    print("One session for all HellBot's Project.")
-    api_id = int(input("\nEnter APP ID here: "))
-    api_hash = input("\nEnter API_HASH here: ")
-    with PClient(name="helluser", api_id=api_id, api_hash=api_hash, in_memory=True) as hell:
-        print("\nYour HELLBOT SESSION is saved in your telegram saved messages.")
-        _session = hell.export_session_string()
-        hell_session = hellbot_session(_session)
-        hell.send_message(
-            "me",
-            f"#HELLBOT_SESSION \n\n`{hell_session}`",
-        )
             
