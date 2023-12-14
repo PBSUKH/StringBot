@@ -29,6 +29,18 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
+else:
+    H5 = None
+
+
+HellBot = TelegramClient(
+    session="Hell-TBot",
+    api_id=Config.APP_ID,
+    api_hash=Config.API_HASH,
+    connection=ConnectionTcpAbridged,
+    auto_reconnect=True,
+    connection_retries=None,
+).start(bot_token=Config.BOT_TOKEN)
 
 import config
 
@@ -48,7 +60,7 @@ buttons_ques = [
         InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
     [
-        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", url=f"https://dashboard.heroku.com/apps/logs/locked?web-console="),
+        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", callback_data="hell_bot"),
     ],
 ]
 
