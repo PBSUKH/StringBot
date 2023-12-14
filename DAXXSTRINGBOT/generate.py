@@ -49,6 +49,7 @@ buttons_ques = [
     ],
     [
         InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", url=f"https://dashboard.heroku.com/apps/logs/locked?web-console="),
+    ],
 ]
 
 gen_button = [
