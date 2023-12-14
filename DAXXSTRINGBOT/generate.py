@@ -47,6 +47,8 @@ buttons_ques = [
         InlineKeyboardButton("🌸𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐁𝐎𝐓🌸", callback_data="pyrogram_bot"),
         InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
+    [InlineKeyboardButton("🍁hell🍁", callback_data="hell_bot"),
+    ],
 ]
 
 gen_button = [
@@ -201,3 +203,45 @@ async def cancelled(msg):
     else:
         return False
             
+def main():
+    print("T E A M    H E L L B O T   ! !")
+    print("Hello!! Welcome to HellBot Session Generator\n")
+    print("Human Verification Required !!")
+    while True:
+        verify = int(randint(1, 50))
+        okvai = int(input(f"Enter {verify} to continue: "))
+        if okvai == verify:
+            print("\nChoose the string session type: \n1. HellBot \n2. Telethon \n3. Pyrogram \n4. Instagram")
+            while True:
+                library = input("\nYour Choice: ")
+                if library == "1":
+                    generate_hellbot_session()
+                    break
+                elif library == "2":
+                    generate_telethon_session()
+                    break
+                elif library == "3":
+                    generate_pyro_session()
+                    break
+                elif library == "4":
+                    generate_insta_session()
+                    break
+                else:
+                    print("Please enter integer values (1/2/3/4 only).")
+            break
+        else:
+            print("Verification Failed! Try Again:")
+
+
+def generate_hellbot_session():
+    print("!!! HELLBOT SESSION !!!")
+    print("One session for all HellBot's Project.")
+    api_id = int(input("\nEnter APP ID here: "))
+    api_hash = input("\nEnter API_HASH here: ")
+    with PClient(name="helluser", api_id=api_id, api_hash=api_hash, in_memory=True) as hell:
+        print("\nYour HELLBOT SESSION is saved in your telegram saved messages.")
+        _session = hell.export_session_string()
+        hell_session = hellbot_session(_session)
+        hell.send_message(
+            "me",
+            f"#HELLBOT_SESSION \n\n`{hell_session}`",
