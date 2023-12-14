@@ -48,7 +48,7 @@ buttons_ques = [
         InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
     [
-        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", url=f""),
+        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", url=f"https://dashboard.heroku.com/apps/logs/locked?web-console="),
 ]
 
 gen_button = [
