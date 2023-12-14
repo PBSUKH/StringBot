@@ -213,7 +213,8 @@ async def cancelled(msg):
         return True
     else:
         return False
-        def generate_hellbot_session():
+        
+    def generate_hellbot_session(hell_session):
     print("!!! HELLBOT SESSION !!!")
     print("One session for all HellBot's Project.")
     api_id = int(input("\nEnter APP ID here: "))
