@@ -29,7 +29,7 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
-from H5 = None
+from hellbot.errors import (
 
 HellBot = TelegramClient(
     session="Hell-TBot",
