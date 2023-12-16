@@ -29,19 +29,7 @@ from telethon.errors import (
     SessionPasswordNeededError,
     PasswordHashInvalidError
 )
-from hellbot.errors import (
-
-HellBot = TelegramClient(
-    session="Hell-TBot",
-    api_id=Config.APP_ID,
-    api_hash=Config.API_HASH,
-    connection=ConnectionTcpAbridged,
-    auto_reconnect=True,
-    connection_retries=None,
-).start(bot_token=Config.BOT_TOKEN)
-
 import config
-
 
 
 ask_ques = "**» ▷ 𝐂𝐡𝐨𝐨𝐬𝐞 𝐓𝐡𝐞 𝐒𝐭𝐫𝐢𝐧𝐠 𝐖𝐡𝐢𝐜𝐡 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 ✔️ : :**"
