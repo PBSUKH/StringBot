@@ -57,8 +57,7 @@ buttons_ques = [
         InlineKeyboardButton("🌸𝐏𝐘𝐑𝐎𝐆𝐑𝐀𝐌 𝐁𝐎𝐓🌸", callback_data="pyrogram_bot"),
         InlineKeyboardButton("🍁𝐓𝐄𝐋𝐄𝐓𝐇𝐎𝐍 𝐁𝐎𝐓🍁", callback_data="telethon_bot"),
     ],
-    [
-        InlineKeyboardButton("👻 𝐏ʙ𝐗ʙᴏᴛ 👻", callback_data="hell_bot"),
+        [InlineKeyboardButton("🦋𝐏𝐁𝐗 𝐁𝐎𝐓 𝐒𝐓𝐑𝐈𝐍𝐆🦋", "https://t.me/II_BAD_BBY_II"),
     ],
 ]
 
